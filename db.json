@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "pass1"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "pass2"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "type": "website",
+      "description": "Искам сайт за онлайн магазин"
+    }
+  ]
+}
