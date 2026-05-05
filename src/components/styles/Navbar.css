@@ -1,0 +1,101 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 78px;
+  padding: 0 34px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 18, 21, 0.86);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-image {
+  height: 60px;
+  width: auto;
+  display: block;
+  filter: none;
+}
+
+.brand-title {
+  color: #ff9a24;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.96rem;
+  letter-spacing: 0.2px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb45f;
+  background: rgba(255, 145, 36, 0.1);
+  border-color: rgba(255, 145, 36, 0.28);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 74px;
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 6px;
+    margin-left: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 0.88rem;
+    padding: 8px 10px;
+  }
+
+  .brand-logo-image {
+    height: 52px;
+  }
+
+  .brand-title {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-title {
+    display: none;
+  }
+
+  .brand-logo-image {
+    height: 46px;
+  }
+
+  .nav-links a {
+    padding: 7px 9px;
+    font-size: 0.84rem;
+  }
+}

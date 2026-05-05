@@ -1,0 +1,129 @@
+.contacts-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(255, 140, 34, 0.14), transparent 30%),
+    linear-gradient(160deg, #1a1a1f 0%, #15151a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contacts-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, rgba(255, 149, 50, 0.08), transparent 46%);
+}
+
+.contacts-head {
+  position: relative;
+}
+
+.contacts-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.42px;
+  color: #ffd8aa;
+  border: 1px solid rgba(255, 169, 79, 0.34);
+  background: rgba(255, 138, 26, 0.11);
+}
+
+.contacts-grid {
+  position: relative;
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contact-item {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.contact-label {
+  display: block;
+  color: #bdbdc3;
+  font-size: 0.8rem;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.contact-value {
+  display: inline-block;
+  color: #ffb765;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #cfcfd4;
+  font-size: 0.92rem;
+}
+
+.contacts-actions {
+  position: relative;
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 11px 16px;
+  border-radius: 11px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.2px;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-cta.primary {
+  border: 1px solid rgba(255, 166, 84, 0.42);
+  background: linear-gradient(135deg, #ff9a35, #ff7d0a 62%, #ff6a00);
+  color: #ffffff;
+  box-shadow: 0 10px 26px rgba(255, 120, 0, 0.22);
+}
+
+.contact-cta.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.03);
+  color: #f0f0f0;
+}
+
+.contact-cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 700px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-actions {
+    display: grid;
+    gap: 12px;
+    padding: 2px;
+  }
+
+  .contact-cta {
+    width: 100%;
+  }
+}
